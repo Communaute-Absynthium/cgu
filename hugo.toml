@@ -1,3 +1,30 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = "Absynthium Doc"
+baseURL = "https://doc.absynthium.com/"
+theme = "hugo-theme-monochrome"
+
+[params]
+navbar_title = "Absynthium Doc" # default: site's `title`
+footer = "Communauté Absynthium" # default: None
+enable_toc = true # default: true
+enable_collapsible_toc = false # default: false
+enable_collapsible_changelogs = false # default: false
+enable_site_search = true # default: false
+author = "Communauté Absynthium" # default: no author `meta` tag
+
+
+[[menu.navbar]]
+identifier = "cgu_fr"
+name = "Conditions générales d'utilisation"
+title = "CGU - FR"
+url = "/cgu/fr/"
+weight = 1
+
+[[menu.navbar]]
+identifier = "cgu_en"
+name = "General Terms of Use"
+title = "CGU - EN"
+url = "/cgu/en/"
+weight = 2
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
